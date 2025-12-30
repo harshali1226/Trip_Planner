@@ -1,0 +1,9 @@
+.env
+__pycache__/
+.venv/
+.env.*
+.git/
+.gitignore
+Dockerfile
+uv.lock
+node_modules/
