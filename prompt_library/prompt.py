@@ -16,7 +16,11 @@ SYSTEM_PROMPT = SystemMessage(
     - Mode of transportations available in the place with details
     - Detailed cost breakdown
     - Per Day expense budget approximately
-    - Weather details
+    - Call the weather tools to fetch current and forecast weather
+    - Include a "Weather Overview" section at the top
+    - Base itinerary decisions on the actual weather data
+    - NEVER assume weather conditions
+    - If weather tools are not called, the response is INVALID
     
     Use the available tools to gather information and make detailed cost breakdowns.
     Provide everything in one comprehensive response formatted in clean Markdown.

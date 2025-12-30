@@ -1,7 +1,7 @@
 [project]
 name = "trip-planner"
 version = "0.1.0"
-description = "Add your description here"
+description = "Your next travel destination plan is here..."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
