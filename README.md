@@ -45,10 +45,21 @@ This project aims to provide an **AI travel assistant** that can:
 
 ### 4.1 Agentic Planning Pipeline
 
+```
+User ➜ Streamlit ➜ FastAPI /query ➜ LangGraph Agent
+          │                    │
+          │                    ├─▶ Weather Tool (OpenWeather)
+          │                    ├─▶ Expense Calculator
+          │                    ├─▶ Itinerary Planner
+          │                    └─▶ Travel Plan Generator
+          ▼
+     JSON Response ➜ Streamlit Renderer
+
+```
 
 <p align="center">
   <!-- Replace with your architecture diagram if you have one -->
-  <img width="520" alt="architecture" src="https://github.com/user-attachments/assets/REPLACE_WITH_YOUR_DIAGRAM" />
+  <img width="216" height="249" alt="my_graph" src="https://github.com/user-attachments/assets/adabe771-9b49-4c92-a4ea-0a9b046a75f5" />
 </p>
 
 **Key components**
@@ -172,3 +183,4 @@ The app returns:
 ### 10. License
 
 This project is released under the **MIT License**.
+
