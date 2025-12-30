@@ -1,3 +1,15 @@
+---
+title: AI Travel Buddy
+emoji: 🌍
+colorFrom: blue
+colorTo: purple
+sdk: docker
+sdk_version: "latest"
+app_file: app.py
+pinned: false
+---
+
+
 # 🌍 Agentic AI Travel Planner
 
 ## 1. Overview
