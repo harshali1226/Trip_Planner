@@ -24,7 +24,8 @@ The application is fully containerised with separate Docker images for the **bac
 
 <p align="center">
   <!-- Replace with your screenshot URL -->
-  <img width="1600" alt="trip-planner-ui" src="https://github.com/user-attachments/assets/REPLACE_WITH_YOUR_IMAGE" />
+  <img width="1510" height="775" alt="image" src="https://github.com/user-attachments/assets/288fcebc-36f6-4c3a-8e1d-73e8212642e6" />
+
 </p>
 
 > **Figure 1.** Streamlit front-end showcasing chat-based travel planning and structured plan output.
@@ -226,5 +227,6 @@ The app returns:
 ### 10. License
 
 This project is released under the **MIT License**.
+
 
 
