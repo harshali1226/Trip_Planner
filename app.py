@@ -8,8 +8,21 @@ import sys
 # BASE_URL = "http://localhost:8000"  # Backend endpoint
 import os
 
-BASE_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+# BASE_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+import subprocess
+import time
 
+subprocess.Popen([
+    "uv", "run", "uvicorn",
+    "main:app",
+    "--host", "0.0.0.0",
+    "--port", "8000"
+])
+
+time.sleep(2)
+
+
+BASE_URL = "http://127.0.0.1:8000"
 
 st.set_page_config(
     page_title="🌍 Travel Planner Agentic Application",
@@ -59,5 +72,4 @@ if submit_button and user_input.strip():
         else:
             st.error(" Bot failed to respond: " + response.text)
 
-    except Exception as e:
-        st.error(f"The response failed due to {e}")
+    except Exception as e:st.error(f"The response failed due to {e}")
