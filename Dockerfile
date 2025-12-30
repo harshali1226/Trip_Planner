@@ -1,5 +1,8 @@
 FROM python:3.11-slim
 
+# Hugging Face requirement
+ENV STREAMLIT_SERVER_PORT=7860
+ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
@@ -13,17 +16,13 @@ RUN apt-get update && apt-get install -y \
 # Install uv
 RUN pip install --no-cache-dir uv
 
-# Copy dependency files first
+# Copy dependency files
 COPY pyproject.toml uv.lock* ./
-
-# Install dependencies into .venv
 RUN uv sync --no-dev
 
-# Copy the entire project into /app
-# (this matches your current flat structure)
+# Copy project code
 COPY . .
 
-EXPOSE 8000
+EXPOSE 7860
 
-# main.py is at repo root
-CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uv", "run", "streamlit", "run", "app.py"]
