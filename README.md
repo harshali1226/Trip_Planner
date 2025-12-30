@@ -92,6 +92,37 @@ The Streamlit UI mimics a chat interface and calls the backend REST endpoint. Ou
 
 ## 6. Repository Layout
 
+```
+Trip_Planner/
+├─ .env                   # Environment variables
+├─ .gitignore             # Files to ignore in Git
+├─ app.py                 # Streamlit frontend entry point
+├─ main.py                # FastAPI backend entry point
+├─ Dockerfile.frontend    # Dockerfile for frontend
+├─ Dockerfile.backend     # Dockerfile for backend
+├─ docker-compose.yml     # Orchestrator for services
+├─ pyproject.toml         # Project dependencies (uv-managed)
+├─ uv.lock                # Locked dependency versions
+├─ notebook/              # Working on tools
+│   ├─ requirements.ipynb
+├─ prompt_library/        # System Prompt
+│   ├─ prompt.py
+├─ utils/                 # Utility modules (weather, calculators, etc.)
+│   ├─ weather_info.py
+│   ├─ expense_calculator.py
+│   └─ config_loader.py
+|   └─ currency_converter.py
+|   └─ place_info_search.py
+|   └─ model_loader.py
+├─ tools/                 # LangChain / LangGraph tool wrappers
+│   ├─ weather_info_tool.py
+│   ├─ expense_calculator.py
+│   └─ arithmetic_op_tool.py
+│   └─ currency_conversion.py
+│   └─ place_search_tool.py
+└─ README.md              # Project overview and instructions
+
+```
 
 ---
 
@@ -183,4 +214,5 @@ The app returns:
 ### 10. License
 
 This project is released under the **MIT License**.
+
 
